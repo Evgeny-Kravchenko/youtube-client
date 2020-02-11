@@ -1,4 +1,4 @@
-interface Statistics {
+interface IStatistics {
   viewCount: string;
   likeCount: string;
   dislikeCount: string;
@@ -6,47 +6,43 @@ interface Statistics {
   commentCount: string;
 }
 
-interface Localized {
+interface ILocalized {
   title: string;
   description: string;
 }
 
-interface SnippetOption {
+interface ISnippetOption {
   url: string;
   width: number;
   height: number;
 }
 
-interface Thumbnails {
-  default: SnippetOption;
-  medium: SnippetOption;
-  height: SnippetOption;
-  standart: SnippetOption;
-  maxres: SnippetOption;
+interface IThumbnails {
+  default: ISnippetOption;
+  medium: ISnippetOption;
+  height: ISnippetOption;
+  standart: ISnippetOption;
+  maxres: ISnippetOption;
 }
 
-interface Snippet {
+interface ISnippet {
   publishedAt: string;
   channelId: string;
   title: string;
   description: string;
-  thumbnails: Thumbnails;
+  thumbnails: IThumbnails;
   channelTitle: string;
   tags: Array<string>;
   categoryId: string;
   liveBroadcastContent: string;
-  localized: Localized;
+  localized: ILocalized;
   defaultAudioLanguage: string;
 }
 
-interface Item {
+export interface IItem {
   kind: string;
   etag: string;
   id: string;
-  snippet: Snippet;
-  statistics: Statistics;
-}
-
-export interface ResponseYouTubeItem {
-  [index: number]: Item;
+  snippet: ISnippet;
+  statistics: IStatistics;
 }
