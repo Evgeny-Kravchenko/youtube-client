@@ -4,19 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SearchComponent } from './components/search/search.component';
-import { CardContainerComponent } from './components/card-container/card-container.component';
+import { AppFilteringCriteriaBlock } from './components/filtering-criteria-block/app-filtering-criteria-block';
+import { SearchResultBlock } from './components/search-results-block/search-result-block';
 import { CardItemComponent } from './components/card-item/card-item.component';
-import { AuthorizationComponent } from './components/authorization/authorization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
-    CardContainerComponent,
+    AppFilteringCriteriaBlock,
+    SearchResultBlock,
     CardItemComponent,
-    AuthorizationComponent,
   ],
   imports: [
     BrowserModule,

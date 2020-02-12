@@ -3,10 +3,10 @@ import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
 
 @Component({
   selector: 'app-card-container',
-  templateUrl: './card-container.component.html',
-  styleUrls: ['./card-container.component.scss'],
+  templateUrl: './search-result-block.html',
+  styleUrls: ['./search-result-block.scss'],
 })
-export class CardContainerComponent implements OnInit {
+export class SearchResultBlock implements OnInit {
   public items: Array<IResponseYouTube>;
 
   constructor() {}
