@@ -1,0 +1,119 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1400px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  margin-left: auto;
+}
+
+.inp-search {
+  width: 396px;
+  height: 24px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: 0.5s;
+
+  &:focus {
+    background-color: #bebebe;
+  }
+}
+
+.btn-search {
+  width: 80px;
+  height: 24px;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5da2ff;
+  }
+}
+
+.search-setting {
+  width: 24px;
+  height: 24px;
+  background-image: url('../../../assets/images/search_settings.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #5da2ff;
+  }
+}
+
+.wrapper-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 105px;
+  margin-left: auto;
+}
+
+.btn-login {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: #2f80ed;
+  background-image: url('../../../assets/images/login-icon.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &:hover {
+    background-color: #5da2ff;
+  }
+}
+
+.btn-search,
+.search-setting,
+.btn-login {
+  background-color: #2f80ed;
+  transition: 0.5s;
+  box-shadow: 2px 0 4px #2f80ed;
+  cursor: pointer;
+}
+
+.login, .inp-search, .btn-search {
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+}
+
+app-filtering-criteria-block {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .wrapper-login {
+    margin: 0 auto 20px 0;
+  }
+}

@@ -4,23 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AppFilteringCriteriaBlock } from './components/filtering-criteria-block/app-filtering-criteria-block';
-import { SearchResultBlock } from './components/search-results-block/search-result-block';
+import { FilteringBlockComponent } from './components/filtering-criteria-block/app-filtering-criteria-block';
+import { SearchResultBlockComponent } from './components/search-results-block/search-result-block';
 import { CardItemComponent } from './components/card-item/card-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AppFilteringCriteriaBlock,
-    SearchResultBlock,
+    FilteringBlockComponent,
+    SearchResultBlockComponent,
     CardItemComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

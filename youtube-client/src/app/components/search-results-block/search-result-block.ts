@@ -6,7 +6,7 @@ import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
   templateUrl: './search-result-block.html',
   styleUrls: ['./search-result-block.scss'],
 })
-export class SearchResultBlock implements OnInit {
+export class SearchResultBlockComponent implements OnInit {
   public items: Array<IResponseYouTube>;
 
   constructor() {}

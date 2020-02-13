@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app-filtering-criteria-block.html',
   styleUrls: ['./app-filtering-criteria-block.scss'],
 })
-export class AppFilteringCriteriaBlock implements OnInit {
+export class FilteringBlockComponent implements OnInit {
   constructor() {}
 
   public ngOnInit(): void {}
