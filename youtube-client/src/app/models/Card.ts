@@ -5,4 +5,5 @@ export interface ICard {
   countDislikes: string;
   countComment: string;
   title: string;
+  publishedAt: string;
 }

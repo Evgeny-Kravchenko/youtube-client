@@ -25,6 +25,7 @@ export class SearchResultBlockComponent implements OnInit {
         countDislikes: item.statistics.dislikeCount,
         countComment: item.statistics.commentCount,
         title: item.snippet.title,
+        publishedAt: item.snippet.publishedAt
       };
     });
   }

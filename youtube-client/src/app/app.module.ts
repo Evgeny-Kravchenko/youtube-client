@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FilteringBlockComponent } from './components/filtering-criteria-block/app-filtering-criteria-block';
 import { SearchResultBlockComponent } from './components/search-results-block/search-result-block';
 import { CardItemComponent } from './components/card-item/card-item.component';
+import { AgeOfPublicationDirective } from './directives/age-of-publication.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CardItemComponent } from './components/card-item/card-item.component';
     FilteringBlockComponent,
     SearchResultBlockComponent,
     CardItemComponent,
+    AgeOfPublicationDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

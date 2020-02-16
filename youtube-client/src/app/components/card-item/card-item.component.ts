@@ -14,6 +14,7 @@ export class CardItemComponent implements OnInit {
   public countLike: string;
   public countDislike: string;
   public countComments: string;
+  public publishedAt: string;
 
   public ngOnInit(): void {
     this.imageUrl = this.item.imageUrl;
@@ -22,5 +23,6 @@ export class CardItemComponent implements OnInit {
     this.countLike = this.item.countLikes;
     this.countDislike = this.item.countDislikes;
     this.countComments = this.item.countComment;
+    this.publishedAt = this.item.publishedAt;
   }
 }
