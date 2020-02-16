@@ -1,0 +1,19 @@
+.container-results-card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 1400px;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+app-card-item {
+  margin-bottom: 20px;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
+import { ICard } from '@youtube/models/Card';
+import { youTubeResponse } from '@youtube/mock-response';
 
 @Component({
   selector: 'app-card-container',
@@ -7,9 +8,24 @@ import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
   styleUrls: ['./search-result-block.scss'],
 })
 export class SearchResultBlockComponent implements OnInit {
-  public items: Array<IResponseYouTube>;
+  public items: Array<ICard>;
 
   constructor() {}
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.showResults();
+  }
+
+  public showResults(): void {
+    this.items = youTubeResponse.items.map(item => {
+      return {
+        imageUrl: item.snippet.thumbnails.medium.url,
+        countViews: item.statistics.viewCount,
+        countLikes: item.statistics.likeCount,
+        countDislikes: item.statistics.dislikeCount,
+        countComment: item.statistics.commentCount,
+        title: item.snippet.title,
+      };
+    });
+  }
 }

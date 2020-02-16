@@ -1,2 +1,5 @@
-<p>search result block!</p>
-<app-card-item></app-card-item>
+<div class="container-results-card">
+  <div class="wrapper">
+    <app-card-item *ngFor="let item of items" [item]="item"></app-card-item>
+  </div>
+</div>

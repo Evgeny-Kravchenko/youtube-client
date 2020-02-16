@@ -1,4 +1,3 @@
-
 import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
 
 export const youTubeResponse: IResponseYouTube = {
