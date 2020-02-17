@@ -6,13 +6,13 @@
       </a>
       <form action="#">
         <input
+          #inp_search
           class="inp-search"
           type="search"
           placeholder="What do you want to find out?"
           maxlength="50"
-          required
         />
-        <button class="btn-search">search</button>
+        <button class="btn-search" (click) = "search($event, inp_search.value)">search</button>
       </form>
       <button class="search-setting" (click)="toggle()"></button>
     </div>
