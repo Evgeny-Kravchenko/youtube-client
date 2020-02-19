@@ -20,8 +20,8 @@ interface ISnippetOption {
 interface IThumbnails {
   default: ISnippetOption;
   medium: ISnippetOption;
-  height: ISnippetOption;
-  standart: ISnippetOption;
+  high: ISnippetOption;
+  standard: ISnippetOption;
   maxres: ISnippetOption;
 }
 
@@ -35,6 +35,7 @@ interface ISnippet {
   tags: Array<string>;
   categoryId: string;
   liveBroadcastContent: string;
+  defaultLanguage?: string;
   localized: ILocalized;
   defaultAudioLanguage: string;
 }

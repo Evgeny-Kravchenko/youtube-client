@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestResultService } from '../../services/request-result.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  public name: string;
+  public isShowFilter: boolean;
 
-  public ngOnInit(): void {}
+  constructor(private requestResultService: RequestResultService) {}
+
+  public ngOnInit(): void {
+    this.isShowFilter = false;
+    this.name = 'Your name';
+  }
+
+  public toggle(): void {
+    this.isShowFilter = !this.isShowFilter;
+  }
+
+  public search(event: MouseEvent, value: string): void {
+    event.preventDefault();
+    this.requestResultService.sendRequest(value);
+  }
 }
