@@ -25,15 +25,16 @@ export class SearchResultBlockComponent implements OnInit {
       if (Array.isArray(sortParameter)) {
         this.sortParameter = sortParameter[0];
         this.filterWord = sortParameter[1];
-        console.log(this.sortParameter, this.filterWord);
       } else {
         this.sortParameter = sortParameter;
+        this.filterWord = '';
       }
     });
   }
 
   public ngOnInit(): void {
     this.sortParameter = 'none';
+    this.filterWord = '';
   }
 
   public showResults(youTubeResponse: IResponseYouTube): void {

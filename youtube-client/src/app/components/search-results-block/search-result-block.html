@@ -2,7 +2,7 @@
   <div class="wrapper">
     <app-card-item
       [appAgeOfPublication]="item.publishedAt"
-      *ngFor="let item of (items | sort:sortParameter)"
+      *ngFor="let item of (items | sort:sortParameter | filterByWord:sortParameter:filterWord)"
       [item]="item"
     ></app-card-item>
   </div>

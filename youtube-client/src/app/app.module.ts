@@ -9,6 +9,7 @@ import { SearchResultBlockComponent } from './components/search-results-block/se
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { AgeOfPublicationDirective } from './directives/age-of-publication.directive';
 import { SortPipe } from './pipes/sort.pipe';
+import { FilterByWordPipe } from './pipes/filter-by-word.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SortPipe } from './pipes/sort.pipe';
     CardItemComponent,
     AgeOfPublicationDirective,
     SortPipe,
+    FilterByWordPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
