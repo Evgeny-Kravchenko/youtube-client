@@ -1,6 +1,8 @@
-.header-container {
+:host {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 10px 0;
   background-color: #e5e5e5;

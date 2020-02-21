@@ -1,25 +1,23 @@
-<div class="header-container">
-  <header class="header">
-    <div class="wrapper">
-      <a href="#">
-        <img src="../../../assets/images/logo.png" alt="Logo" />
-      </a>
-      <form action="#">
-        <input
-          #inp_search
-          class="inp-search"
-          type="search"
-          placeholder="What do you want to find out?"
-          maxlength="50"
-        />
-        <button class="btn-search" (click) = "search($event, inp_search.value)">search</button>
-      </form>
-      <button class="search-setting" (click)="toggle()"></button>
-    </div>
-    <div class="wrapper-login">
-      <span class="login">{{ name }}</span>
-      <button class="btn-login"></button>
-    </div>
-  </header>
-</div>
+<header class="header">
+  <div class="wrapper">
+    <a href="#">
+      <img src="../../../assets/images/logo.png" alt="Logo" />
+    </a>
+    <form action="#">
+      <input
+        #inp_search
+        class="inp-search"
+        type="search"
+        placeholder="What do you want to find out?"
+        maxlength="50"
+      />
+      <button class="btn-search" (click)="search($event, inp_search.value)">search</button>
+    </form>
+    <button class="search-setting" (click)="toggle()"></button>
+  </div>
+  <div class="wrapper-login">
+    <span class="login">{{ name }}</span>
+    <button class="btn-login"></button>
+  </div>
+</header>
 <app-filtering-criteria-block *ngIf="isShowFilter"></app-filtering-criteria-block>
