@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Renderer2, Input, OnInit } from '@angular/core';
-import { timeInMilliseconds, colorFromDate } from '../shared/enums';
+import { timeInMilliseconds, colorFromDate } from '@youtube/youtube/models/enums';
 
 @Directive({
   selector: '[appAgeOfPublication]',

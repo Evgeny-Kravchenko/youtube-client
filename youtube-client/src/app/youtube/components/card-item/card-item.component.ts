@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ICard } from '@youtube/models/Card';
+import { ICard } from '@youtube/youtube/models/Card';
 
 @Component({
   selector: 'app-card-item',

@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
-import { youTubeResponse } from '@youtube/mock-response';
+import { IResponseYouTube } from '@youtube/youtube/models/ResponseYouTube.model';
+import { youTubeResponse } from '@youtube/core/mock-response';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class RequestResultService {
   private subject: Subject<IResponseYouTube> = new Subject<IResponseYouTube>();
 

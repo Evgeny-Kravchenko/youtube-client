@@ -92,7 +92,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "./src/app/mock-response.ts"]
+            "exclude": ["**/node_modules/**", "./src/app/core/mock-response.ts"]
           }
         },
         "e2e": {

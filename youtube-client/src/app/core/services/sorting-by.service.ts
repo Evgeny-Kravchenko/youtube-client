@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class SortingByService {
   private subject: Subject<string | string[]> = new Subject<string | string[]>();
 

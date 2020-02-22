@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ICard } from '@youtube/models/Card';
+import { ICard } from '@youtube/youtube/models/Card';
 
 @Pipe({
   name: 'filterByWord',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ICard } from '@youtube/models/Card';
-import { RequestResultService } from '../../services/request-result.service';
-import { IResponseYouTube } from '@youtube/models/ResponseYouTube.model';
-import { SortingByService } from '@youtube/services/sorting-by.service';
+import { ICard } from '@youtube/youtube/models/Card';
+import { RequestResultService } from '@youtube/core/services/request-result.service';
+import { IResponseYouTube } from '@youtube/youtube/models/ResponseYouTube.model';
+import { SortingByService } from '@youtube/core/services/sorting-by.service';
 
 @Component({
   selector: 'app-card-container',

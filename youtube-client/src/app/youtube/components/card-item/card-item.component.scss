@@ -47,22 +47,22 @@
 }
 
 .viewed::before {
-  content: url('../../../assets/images/viewed.png');
+  content: url('../../../../assets/images/viewed.png');
   left: -25px;
 }
 
 .liked::before {
-  content: url('../../../assets/images/liked.png');
+  content: url('../../../../assets/images/liked.png');
   left: -20px;
 }
 
 .disliked::before {
-  content: url('../../../assets/images/dislike.png');
+  content: url('../../../../assets/images/dislike.png');
   left: -20px;
 }
 
 .comments::before {
-  content: url('../../../assets/images/Comments.png');
+  content: url('../../../../assets/images/Comments.png');
   left: -20px;
 }
 
