@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestResultService } from '../../services/request-result.service';
+import { ToggleFilterService } from '@youtube/core/services/toggle-filter.service';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +9,18 @@ import { RequestResultService } from '../../services/request-result.service';
 })
 export class HeaderComponent implements OnInit {
   public name: string;
-  public isShowFilter: boolean;
 
-  constructor(private requestResultService: RequestResultService) {}
+  constructor(
+    private requestResultService: RequestResultService,
+    private filterToggleService: ToggleFilterService,
+  ) {}
 
   public ngOnInit(): void {
-    this.isShowFilter = false;
     this.name = 'Your name';
   }
 
   public toggle(): void {
-    this.isShowFilter = !this.isShowFilter;
+    this.filterToggleService.setStateFilterBlock();
   }
 
   public search(event: MouseEvent, value: string): void {

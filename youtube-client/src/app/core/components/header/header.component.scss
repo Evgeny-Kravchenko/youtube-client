@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1400px;
+  width: 80%;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -97,10 +97,6 @@
 .login, .inp-search, .btn-search {
   font-family: Roboto, sans-serif;
   font-size: 1.2rem;
-}
-
-app-filtering-criteria-block {
-  width: 100%;
 }
 
 @media screen and (max-width: 900px) {
