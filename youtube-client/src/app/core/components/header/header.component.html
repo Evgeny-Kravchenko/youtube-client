@@ -1,8 +1,6 @@
 <header class="header">
   <div class="wrapper">
-    <a href="#">
-      <img src="../../../../assets/images/logo.png" alt="Logo" />
-    </a>
+    <img class="logo" src="../../../../assets/images/logo.png" alt="Logo" (click)="mainPage()"/>
     <form action="#">
       <input
         #inp_search
@@ -17,6 +15,6 @@
   </div>
   <div class="wrapper-login">
     <span class="login">{{ name }}</span>
-    <button class="btn-login"></button>
+    <button class="btn-login" (click)="goToAuth()"></button>
   </div>
 </header>

@@ -7,9 +7,7 @@ import {
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class LoadingGuard implements CanLoad {
   constructor(private router: Router) {}
 
@@ -18,12 +16,11 @@ export class LoadingGuard implements CanLoad {
   }
 
   public  checkAuth(): boolean {
-    let isAuth: boolean;
-    isAuth = true;
+    let isAuth: boolean = Boolean(localStorage.getItem('name'));
     if (isAuth) {
-      return isAuth;
+      return true;
     }
     this.router.navigate(['/auth']);
-    return isAuth;
+    return false;
   }
 }
