@@ -41,6 +41,9 @@ export class SearchResultBlockComponent implements OnInit {
     this.sortParameter = 'none';
     this.filterWord = '';
     this.isShowFilter = false;
+    if (this.requestResultService.items) {
+      this.items = this.requestResultService.items;
+    }
   }
 
   public showResults(arrayCard: Array<ICard>): void {
