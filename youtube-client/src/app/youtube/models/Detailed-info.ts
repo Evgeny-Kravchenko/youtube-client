@@ -1,10 +1,10 @@
-export interface ICard {
+export interface IDetailedInfo {
+  title: string;
+  publishedAt: string;
+  description: string;
   imageUrl: string;
   countViews: string;
   countLikes: string;
   countDislikes: string;
   countComment: string;
-  title: string;
-  publishedAt: string;
-  id: string;
 }

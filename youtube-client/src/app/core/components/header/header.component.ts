@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.name = 'Your name';
+    this.name = localStorage.getItem('name') || 'Your name';
   }
 
   public toggle(): void {

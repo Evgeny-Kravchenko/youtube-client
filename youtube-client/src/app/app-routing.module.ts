@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoadingGuard } from '@youtube/core/guards/loading.guard';
 import { ActivateGuard } from '@youtube/core/guards/activate.guard';
+import { NotFoundComponent } from '@youtube/core/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -12,12 +12,15 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./youtube/youtube.module').then(m => m.YoutubeModule),
-    canLoad: [LoadingGuard],
     canActivate: [ActivateGuard],
   },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICard } from '@youtube/youtube/models/Card';
 import { RequestResultService } from '@youtube/core/services/request-result.service';
-import { IResponseYouTube } from '@youtube/youtube/models/ResponseYouTube.model';
 import { SortingByService } from '@youtube/core/services/sorting-by.service';
 import { ToggleFilterService } from '@youtube/core/services/toggle-filter.service';
 
@@ -44,17 +43,7 @@ export class SearchResultBlockComponent implements OnInit {
     this.isShowFilter = false;
   }
 
-  public showResults(youTubeResponse: IResponseYouTube): void {
-    this.items = youTubeResponse.items.map(item => {
-      return {
-        imageUrl: item.snippet.thumbnails.medium.url,
-        countViews: item.statistics.viewCount,
-        countLikes: item.statistics.likeCount,
-        countDislikes: item.statistics.dislikeCount,
-        countComment: item.statistics.commentCount,
-        title: item.snippet.title,
-        publishedAt: item.snippet.publishedAt,
-      };
-    });
+  public showResults(arrayCard: Array<ICard>): void {
+    this.items = arrayCard;
   }
 }

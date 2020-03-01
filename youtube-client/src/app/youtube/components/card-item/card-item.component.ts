@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ICard } from '@youtube/youtube/models/Card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-item',
@@ -8,6 +9,7 @@ import { ICard } from '@youtube/youtube/models/Card';
 })
 export class CardItemComponent implements OnInit {
   @Input() private item: ICard;
+  @Input() private index: number;
   public title: string;
   public imageUrl: string;
   public countView: string;
@@ -15,6 +17,9 @@ export class CardItemComponent implements OnInit {
   public countDislike: string;
   public countComments: string;
   public publishedAt: string;
+  public id: string;
+
+  constructor(private router: Router) {}
 
   public ngOnInit(): void {
     this.imageUrl = this.item.imageUrl;
@@ -24,5 +29,10 @@ export class CardItemComponent implements OnInit {
     this.countDislike = this.item.countDislikes;
     this.countComments = this.item.countComment;
     this.publishedAt = this.item.publishedAt;
+    this.id = this.item.id;
+  }
+
+  public showDetailedInformation(): void {
+    this.router.navigate(['home/card', this.id]);
   }
 }
