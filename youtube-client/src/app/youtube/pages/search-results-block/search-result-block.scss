@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 80%;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+app-card-item {
+  margin: 5px 5px 20px 5px;
+  border-radius: 5px;
+}

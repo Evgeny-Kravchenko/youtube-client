@@ -1,0 +1,136 @@
+:host {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+  background: #e5e5e5;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 40%;
+  padding: 35px;
+  box-sizing: border-box;
+  background: #e5e5e5;
+  border-bottom-right-radius: 5px;
+
+  &__text {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #828282;
+
+    span {
+      display: block;
+      color: #000000;
+      font-size: 1.4rem;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.card-image {
+  width: 60%;
+}
+
+.published-at {
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  color: #828282;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: auto auto 0 auto;
+  padding-left: 25px;
+  font-size: 1rem;
+}
+
+.viewed,
+.liked,
+.disliked,
+.comments {
+  position: relative;
+}
+
+.viewed,
+.liked,
+.disliked,
+.comments {
+  &::before {
+    position: absolute;
+  }
+}
+
+.viewed::before {
+  content: url('../../../../assets/images/viewed.png');
+  left: -25px;
+}
+
+.liked::before {
+  content: url('../../../../assets/images/liked.png');
+  left: -20px;
+}
+
+.disliked::before {
+  content: url('../../../../assets/images/dislike.png');
+  left: -20px;
+}
+
+.comments::before {
+  content: url('../../../../assets/images/Comments.png');
+  left: -20px;
+}
+
+.back {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: -32px;
+  background-image: url("../../../../assets/images/button-back.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .card-image {
+    width: 100%;
+  }
+
+  .statistics {
+    margin-top: 30px;
+  }
+}

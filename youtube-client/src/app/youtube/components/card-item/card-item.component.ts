@@ -1,0 +1,38 @@
+import { Component, OnInit, Input } from '@angular/core';
+import { ICard } from '@youtube/youtube/models/Card';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-card-item',
+  templateUrl: './card-item.component.html',
+  styleUrls: ['./card-item.component.scss'],
+})
+export class CardItemComponent implements OnInit {
+  @Input() private item: ICard;
+  @Input() private index: number;
+  public title: string;
+  public imageUrl: string;
+  public countView: string;
+  public countLike: string;
+  public countDislike: string;
+  public countComments: string;
+  public publishedAt: string;
+  public id: string;
+
+  constructor(private router: Router) {}
+
+  public ngOnInit(): void {
+    this.imageUrl = this.item.imageUrl;
+    this.title = this.item.title;
+    this.countView = this.item.countViews;
+    this.countLike = this.item.countLikes;
+    this.countDislike = this.item.countDislikes;
+    this.countComments = this.item.countComment;
+    this.publishedAt = this.item.publishedAt;
+    this.id = this.item.id;
+  }
+
+  public showDetailedInformation(): void {
+    this.router.navigate(['home/card', this.id]);
+  }
+}

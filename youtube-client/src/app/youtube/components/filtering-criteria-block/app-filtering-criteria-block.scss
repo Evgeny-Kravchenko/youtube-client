@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #e5e5e5;
+}
+
+.filtering {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  margin-right: 110px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+}
+
+.sorting-by {
+  color: #929292;
+}
+
+.sort-option {
+  text-decoration-line: underline;
+  color: #2f80ed;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: #5da2ff;
+    text-decoration: none;
+  }
+}
+
+.inp-sort {
+  transition: 0.5s;
+
+  &:focus {
+    background-color: #bebebe;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .filtering {
+    margin-right: 0;
+  }
+}

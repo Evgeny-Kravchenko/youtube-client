@@ -1,0 +1,10 @@
+<app-filtering-criteria-block *ngIf="isShowFilter"></app-filtering-criteria-block>
+<div class="wrapper">
+  <app-card-item
+    [appAgeOfPublication]="item.publishedAt"
+    detailedInfo="border-color"
+    *ngFor="let item of (items | sort:sortParameter | filterByWord:sortParameter:filterWord); let i = index"
+    [item]="item"
+    [index]="i"
+  ></app-card-item>
+</div>

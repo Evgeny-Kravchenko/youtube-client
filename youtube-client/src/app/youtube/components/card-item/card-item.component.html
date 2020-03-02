@@ -1,0 +1,11 @@
+<div class="card-item">
+  <img src="{{ imageUrl }}" alt="{{ title }}" />
+  <div class="statistics">
+    <span class="statistic__item viewed">{{ countView }}</span>
+    <span class="statistic__item liked">{{ countLike }}</span>
+    <span class="statistic__item disliked">{{ countDislike }}</span>
+    <span class="statistic__item comments">{{ countComments }}</span>
+  </div>
+  <h2 class="title">{{ title }}</h2>
+  <button class="more-info" (click)="showDetailedInformation()">more...</button>
+</div>

@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="wrapper">
+    <img class="logo" src="../../../../assets/images/logo.png" alt="Logo" (click)="mainPage()"/>
+    <form action="#">
+      <input
+        #inp_search
+        class="inp-search"
+        type="search"
+        placeholder="What do you want to find out?"
+        maxlength="50"
+      />
+      <button class="btn-search" (click)="search($event, inp_search.value)">search</button>
+    </form>
+    <button class="search-setting" (click)="toggle()"></button>
+  </div>
+  <div class="wrapper-login">
+    <span class="login">{{ name }}</span>
+    <button class="btn-login" (click)="goToAuth()"></button>
+  </div>
+</header>
