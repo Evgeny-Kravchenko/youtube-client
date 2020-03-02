@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ActivateGuard } from '@youtube/core/guards/activate.guard';
-import { NotFoundComponent } from '@youtube/core/components/not-found/not-found.component';
+import { NotFoundComponent } from '@youtube/core/pages/not-found/not-found.component';
 
 const routes: Routes = [
   {

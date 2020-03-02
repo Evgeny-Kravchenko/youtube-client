@@ -1,0 +1,23 @@
+<div class="wrapper" [appAgeOfPublication]="detailedInfo.publishedAt" detailedInfo="shadow">
+  <img class="card-image" src="{{ detailedInfo.imageUrl }}" alt="{{ detailedInfo.title }}" />
+  <div class="description" [appAgeOfPublication]="detailedInfo.publishedAt" detailedInfo="border-color">
+    <h2 class="title">{{ detailedInfo.title }}</h2>
+    <span class="published-at">{{ detailedInfo.publishedAt | date: 'fullDate' }}</span>
+    <p class="description__text">
+      <span>Description:</span>
+      {{ detailedInfo.description }}
+    </p>
+    <div class="statistics">
+      <span class="statistic__item viewed">{{ detailedInfo.countViews }}</span>
+      <span class="statistic__item liked">{{ detailedInfo.countLikes }}</span>
+      <span class="statistic__item disliked">{{ detailedInfo.countDislikes }}</span>
+      <span class="statistic__item comments">{{ detailedInfo.countComment }}</span>
+    </div>
+    <button
+      class="back"
+      [appAgeOfPublication]="detailedInfo.publishedAt"
+      detailedInfo="background-color"
+      (click)="returnToResults()"
+    ></button>
+  </div>
+</div>

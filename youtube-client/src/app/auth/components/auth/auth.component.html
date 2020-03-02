@@ -1,0 +1,18 @@
+<form #myForm="ngForm" class="authentication" novalidate (ngSubmit)="onSubmit(myForm)" *ngIf="!isAuth">
+  <legend class="form-title">Login</legend>
+  <div class="form-group">
+    <label>Login</label>
+    <input class="form-control" name="name" maxlength="30" ngModel required />
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" maxlength="30" ngModel required password />
+  </div>
+  <div class="form-group">
+    <input type="submit" [disabled]="myForm.invalid" class="btn-auth" value="Login" />
+  </div>
+</form>
+<div class="user-info" *ngIf="isAuth">
+  <span class="user-info__name">You are logged in as a {{ userName }}</span>
+  <button class="log-out" (click)="logOut()">LogOut</button>
+</div>

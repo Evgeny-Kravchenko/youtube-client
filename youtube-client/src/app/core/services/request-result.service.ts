@@ -10,7 +10,7 @@ export class RequestResultService {
   private subject: Subject<Array<ICard>> = new Subject<Array<ICard>>();
   public items: Array<ICard>;
 
-  public sendRequest(value: string): void {
+  public sendRequest(): void {
     // Some data request...
     this.items = youTubeResponse.items.map(item => {
       return {
@@ -43,5 +43,9 @@ export class RequestResultService {
       countDislikes: infoById.statistics.dislikeCount,
       countComment: infoById.statistics.commentCount,
     };
+  }
+
+  public clearResults(): void {
+    this.items = [];
   }
 }

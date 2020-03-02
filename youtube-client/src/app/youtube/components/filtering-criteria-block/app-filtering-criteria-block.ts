@@ -7,5 +7,5 @@ import { SortingByService } from '@youtube/core/services/sorting-by.service';
   styleUrls: ['./app-filtering-criteria-block.scss'],
 })
 export class FilteringBlockComponent {
-  constructor(private sortingByService: SortingByService) {}
+  constructor(public sortingByService: SortingByService) {}
 }
