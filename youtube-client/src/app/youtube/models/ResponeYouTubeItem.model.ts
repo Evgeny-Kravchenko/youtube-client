@@ -45,5 +45,5 @@ export interface IItem {
   etag: string;
   id: string;
   snippet: ISnippet;
-  statistics: IStatistics;
+  statistics?: IStatistics;
 }

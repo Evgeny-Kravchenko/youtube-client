@@ -30,6 +30,6 @@ import { DetailedInformationPageComponent } from './pages/detailed-information-p
     AgeOfPublicationDirective,
     SortPipe,
     FilterByWordPipe,
-  ],
+  ]
 })
 export class YoutubeModule {}

@@ -7,10 +7,12 @@ import { ToggleFilterService } from '@youtube/core/services/toggle-filter.servic
 import { AutorizationInfoService } from '@youtube/core/services/autorization-info.service';
 import { ActivateGuard } from '@youtube/core/guards/activate.guard';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ApiInterceptor } from '@youtube/core/interceptors/api.interceptor';
 
 @NgModule({
   declarations: [HeaderComponent, NotFoundComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   exports: [HeaderComponent, NotFoundComponent],
   providers: [
     RequestResultService,
@@ -18,6 +20,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ActivateGuard,
     ToggleFilterService,
     AutorizationInfoService,
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
   ],
 })
 export class CoreModule {}
