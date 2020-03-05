@@ -27,6 +27,8 @@ export class SearchResultBlockComponent implements OnInit {
       if (Array.isArray(sortParameter)) {
         this.sortParameter = sortParameter[0];
         this.filterWord = sortParameter[1];
+      } else if (sortParameter === this.sortParameter) {
+        this.sortParameter = 'reverse';
       } else {
         this.sortParameter = sortParameter;
         this.filterWord = '';
