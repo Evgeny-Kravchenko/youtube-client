@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class AutorizationInfoService {
-  public name: string;
+  public name: string = localStorage.getItem('name') || 'Your name';
   public subjectName: Subject<string> = new Subject<string>();
 
   public setName(name: string): void {

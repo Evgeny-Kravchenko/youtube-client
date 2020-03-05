@@ -40,7 +40,6 @@ export class SearchResultBlockComponent implements OnInit {
   public ngOnInit(): void {
     this.sortParameter = 'none';
     this.filterWord = '';
-    this.isShowFilter = false;
     if (this.requestResultService.items) {
       this.items = this.requestResultService.items;
     }
