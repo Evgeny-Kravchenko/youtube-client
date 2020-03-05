@@ -5,7 +5,7 @@ interface IPageInfo {
   resultsPerPage: number;
 }
 
-export interface IResponseYouTube {
+export interface IResponseYouTubeVideo {
   kind: string;
   etag: string;
   pageInfo: IPageInfo;

@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
       this.name = name;
     });
     this.textInputSearch.pipe(debounceTime(500)).subscribe(value => {
-      this.search(value);
+        this.search(value);
     });
   }
 
