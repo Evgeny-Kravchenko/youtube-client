@@ -6,6 +6,8 @@ import { RequestResultService } from '@youtube/core/services/request-result.serv
 
 @Injectable()
 export class AuthenticationService {
+  private isLogin: boolean;
+
   constructor(
     private router: Router,
     private autorizationInfoService: AutorizationInfoService,
@@ -17,13 +19,15 @@ export class AuthenticationService {
     localStorage.setItem('password', user.password);
     this.autorizationInfoService.setName(user.name);
     this.router.navigate(['']);
-    return true;
+    this.isLogin = true;
+    return this.isLogin;
   }
 
   public logOut(): boolean {
     localStorage.clear();
     this.autorizationInfoService.setName('Your name');
     this.requestResultService.clearResults();
-    return false;
+    this.isLogin = false;
+    return this.isLogin;
   }
 }

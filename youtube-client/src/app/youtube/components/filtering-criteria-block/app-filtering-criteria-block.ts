@@ -8,4 +8,8 @@ import { SortingByService } from '@youtube/core/services/sorting-by.service';
 })
 export class FilteringBlockComponent {
   constructor(public sortingByService: SortingByService) {}
+
+  public sortBy(sortByWord: string): void {
+    this.sortingByService.setParameterSorting(sortByWord);
+  }
 }

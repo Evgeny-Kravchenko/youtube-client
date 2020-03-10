@@ -8,8 +8,8 @@
         type="search"
         placeholder="What do you want to find out?"
         maxlength="50"
+        (input)="textInputSearch.next(inp_search.value)"
       />
-      <button class="btn-search" (click)="search($event, inp_search.value)">search</button>
     </form>
     <button class="search-setting" (click)="toggle()"></button>
   </div>

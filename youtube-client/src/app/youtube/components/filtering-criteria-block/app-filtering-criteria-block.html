@@ -1,13 +1,14 @@
 <div class="filtering">
   <span class="sorting-by">Sorting by:</span>
-  <span class="sort-option" (click)="sortingByService.setParameterSorting('date')">date</span>
-  <span class="sort-option" (click)="sortingByService.setParameterSorting('countOfViews')"
+  <span class="sort-option" (click)="sortBy('date')">date</span>
+  <span class="sort-option" (click)="sortBy('countOfViews')"
     >count of views</span
   >
-  <span
-    class="sort-option"
-    (click)="sortingByService.setParameterSorting('byWordOfSentence', inpSearch.value)"
-    >by word or sentence</span
-  >
-  <input #inpSearch class="inp-sort" type="text" />
+  <span class="sort-option">by word or sentence</span>
+  <input
+    #inpSearch
+    class="inp-sort"
+    type="text"
+    (input)="sortingByService.setParameterSorting('byWordOfSentence', inpSearch.value)"
+  />
 </div>

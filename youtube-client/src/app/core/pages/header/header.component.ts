@@ -3,6 +3,8 @@ import { RequestResultService } from '../../services/request-result.service';
 import { ToggleFilterService } from '@youtube/core/services/toggle-filter.service';
 import { Router } from '@angular/router';
 import { AutorizationInfoService } from '@youtube/core/services/autorization-info.service';
+import { Subject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,7 @@ import { AutorizationInfoService } from '@youtube/core/services/autorization-inf
 })
 export class HeaderComponent implements OnInit {
   public name: string;
+  public textInputSearch: Subject<string> = new Subject<string>();
 
   constructor(
     private requestResultService: RequestResultService,
@@ -20,6 +23,9 @@ export class HeaderComponent implements OnInit {
   ) {
     this.autorizationInfoService.getName().subscribe(name => {
       this.name = name;
+    });
+    this.textInputSearch.pipe(debounceTime(500)).subscribe(value => {
+        this.search(value);
     });
   }
 
@@ -31,8 +37,7 @@ export class HeaderComponent implements OnInit {
     this.filterToggleService.setStateFilterBlock();
   }
 
-  public search(event: MouseEvent, value: string): void {
-    event.preventDefault();
+  public search(value: string): void {
     this.requestResultService.sendRequest(value);
   }
 

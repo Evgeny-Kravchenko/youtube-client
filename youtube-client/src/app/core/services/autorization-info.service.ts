@@ -3,10 +3,12 @@ import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class AutorizationInfoService {
-  private subjectName: Subject<string> = new Subject<string>();
+  public name: string = localStorage.getItem('name') || 'Your name';
+  public subjectName: Subject<string> = new Subject<string>();
 
   public setName(name: string): void {
-    this.subjectName.next(name);
+    this.name = name;
+    this.subjectName.next(this.name);
   }
 
   public getName(): Observable<string> {

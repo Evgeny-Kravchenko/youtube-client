@@ -12,6 +12,9 @@ export class SortPipe implements PipeTransform {
   }
 
   public sortBy(value: Array<ICard>, sortParameter: string): Array<ICard> {
+    if (sortParameter === 'reverse') {
+      return value.reverse();
+    }
     if (sortParameter === 'countOfViews') {
       return value.sort((a, b) => {
         return Number(a.countViews) - Number(b.countViews);
@@ -19,7 +22,7 @@ export class SortPipe implements PipeTransform {
     }
     if (sortParameter === 'date') {
       return value.sort((a, b) => {
-        const millisecondsA: number  = new Date(a.publishedAt).getTime();
+        const millisecondsA: number = new Date(a.publishedAt).getTime();
         const millisecondsB: number = new Date(b.publishedAt).getTime();
         return millisecondsA - millisecondsB;
       });
